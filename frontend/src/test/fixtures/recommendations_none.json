@@ -1,0 +1,27 @@
+{
+  "query": {
+    "movie_id": 497221,
+    "title": "Nightclub"
+  },
+  "k": 10,
+  "similarity": "cosine",
+  "evidence": {
+    "min_shared_terms": 3,
+    "requested_k": 10,
+    "returned": 0,
+    "candidates_examined": 577,
+    "candidates_rejected": 577,
+    "exhausted": true
+  },
+  "recommendations": [],
+  "skipped": [
+    {
+      "movie_id": 29054,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 1119878,
+      "reason": "insufficient_shared_terms"
+    }
+  ]
+}

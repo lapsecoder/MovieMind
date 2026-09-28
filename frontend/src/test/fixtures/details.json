@@ -1,0 +1,27 @@
+{
+  "movie_id": 278,
+  "title": "The Shawshank Redemption",
+  "original_title": "The Shawshank Redemption",
+  "release_year": 1994,
+  "release_date": "1994-09-23",
+  "runtime_minutes": 142,
+  "original_language": "en",
+  "genres": [
+    "crime",
+    "drama"
+  ],
+  "collection_name": null,
+  "popularity": 65.3122,
+  "vote_average": 8.731,
+  "vote_count": 31411,
+  "adult": false,
+  "feature_counts": {
+    "cast": 10,
+    "director": 2,
+    "genres": 2,
+    "keywords": 22,
+    "overview": 39
+  },
+  "document_size": 75,
+  "recommendable": true
+}

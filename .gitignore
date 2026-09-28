@@ -1,0 +1,96 @@
+# ---------------------------------------------------------------------------
+# MovieMind — secrets
+# The TMDb credential must never be committed. fetch_tmdb_snapshot.py reads it
+# from the environment (TMDB_API_READ_ACCESS_TOKEN or TMDB_API_KEY).
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.key
+secrets/
+
+# ---------------------------------------------------------------------------
+# MovieMind — raw dataset (NOT redistributable)
+#
+# The snapshot is fetched from the official TMDb API. TMDb's API Terms of Use
+# grant free NON-COMMERCIAL use with mandatory attribution; they do NOT grant
+# redistribution rights. Committing the snapshot to a public repository would
+# be redistribution, so it is excluded from version control entirely.
+#
+# See docs/phase-02-dataset-audit.md for the full provenance analysis.
+# ---------------------------------------------------------------------------
+# NOTE: the pattern must be `data/*` (not `data/`), because git does not descend
+# into an excluded DIRECTORY, so a later `!data/.gitkeep` could never re-include
+# the file. `data/*` excludes the contents while keeping the directory trackable.
+data/*
+!data/.gitkeep
+
+# Belt-and-braces: never let these slip in even if a rule above is edited.
+data/raw/
+data/audit/
+# Phase 3 derived features. Regenerable from data/raw/ by
+# `python scripts/build_features.py`, and still derived from TMDb content, so
+# it is not committable either.
+data/processed/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---------------------------------------------------------------------------
+# Audit / build artifacts
+# ---------------------------------------------------------------------------
+reports/
+*.log
+audit_snapshot*.json
+audit_report*.md
+*.sqlite
+*.db
+
+# ---------------------------------------------------------------------------
+# Node / frontend build output
+#
+# `frontend/.gitignore` also covers these, and a nested .gitignore does apply
+# inside git. They are repeated here because they are the single largest things
+# that could be staged by accident, and the root file is the one a reader opens
+# first. `package-lock.json` is deliberately NOT ignored: it is what makes an
+# `npm ci` reproducible.
+# ---------------------------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+*.tsbuildinfo
+coverage/
+.nyc_output/
+
+# ---------------------------------------------------------------------------
+# Temporary files
+# ---------------------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.log
+~$*
+
+# ---------------------------------------------------------------------------
+# OS / editor noise
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

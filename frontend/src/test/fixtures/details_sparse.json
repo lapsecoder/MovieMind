@@ -1,0 +1,26 @@
+{
+  "movie_id": 497221,
+  "title": "Nightclub",
+  "original_title": "Nightclub",
+  "release_year": 1983,
+  "release_date": "1983-01-01",
+  "runtime_minutes": 6,
+  "original_language": "en",
+  "genres": [
+    "animation"
+  ],
+  "collection_name": null,
+  "popularity": 2.7447,
+  "vote_average": 7.0,
+  "vote_count": 2,
+  "adult": false,
+  "feature_counts": {
+    "cast": 0,
+    "director": 2,
+    "genres": 1,
+    "keywords": 0,
+    "overview": 8
+  },
+  "document_size": 11,
+  "recommendable": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "ready",
+  "reason": null,
+  "catalogue": {
+    "films": 5000,
+    "dimensions": 23404,
+    "nonzeros": 226352,
+    "density_percent": 0.19343,
+    "load_seconds": 0.2562
+  }
+}

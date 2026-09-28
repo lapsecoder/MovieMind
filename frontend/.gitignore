@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Local environment. `.env.example` is committed as documentation; the real
+# files are not, because a frontend env file is a common place to paste a URL
+# and an API key.
+.env
+.env.local
+.env.*.local
+
+# Vite / TypeScript caches
+.vite/
+*.tsbuildinfo
+
+# Editor and OS noise
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test output
+coverage/

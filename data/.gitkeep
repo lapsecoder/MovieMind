@@ -1,0 +1,9 @@
+# Local data directory for MovieMind.
+#
+# Everything under data/ is intentionally NOT tracked in git.
+# data/raw/     holds the TMDb snapshot fetched via the official API.
+#               TMDb grants free NON-COMMERCIAL use with mandatory attribution,
+#               but does NOT grant redistribution rights, so the snapshot must
+#               not be committed. It is fully regenerable by running
+#               scripts/fetch_tmdb_snapshot.py with your own free API key.
+# data/audit/   holds generated audit output (also untracked).

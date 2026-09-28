@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+      No external fonts, no CDN, no analytics. The app is local-first and must
+      render with the network cable pulled; a Google Fonts <link> would be a
+      third-party request the product does not need and the licence posture
+      (docs/phase-02-dataset-audit.md sec 15) prefers no unaccounted egress.
+    -->
+    <meta name="color-scheme" content="dark" />
+    <meta
+      name="description"
+      content="MovieMind - find films like the one you are looking at, using plot, keywords, genres, cast and director metadata."
+    />
+    <title>MovieMind</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

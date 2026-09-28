@@ -1,0 +1,33 @@
+{
+  "query": "The Naked Gun",
+  "limit": 5,
+  "total_matches": 2,
+  "count": 2,
+  "results": [
+    {
+      "movie_id": 1035259,
+      "title": "The Naked Gun",
+      "original_title": "The Naked Gun",
+      "release_year": 2025,
+      "genres": [
+        "action",
+        "comedy",
+        "crime"
+      ],
+      "popularity": 24.5123,
+      "match": "exact"
+    },
+    {
+      "movie_id": 37137,
+      "title": "The Naked Gun 2½: The Smell of Fear",
+      "original_title": "The Naked Gun 2½: The Smell of Fear",
+      "release_year": 1991,
+      "genres": [
+        "comedy",
+        "crime"
+      ],
+      "popularity": 12.7482,
+      "match": "title_prefix"
+    }
+  ]
+}

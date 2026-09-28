@@ -1,0 +1,26 @@
+{
+  "api_version": "v1",
+  "representation": "D",
+  "config_fingerprint": "af683a71bb38bf690c6e6fe45a20c49f112dc4b97dc7539f1b416f40f9640fd7",
+  "min_shared_terms": 3,
+  "similarity": "cosine",
+  "limits": {
+    "default_k": 10,
+    "max_k": 50,
+    "default_search_limit": 10,
+    "max_search_limit": 50,
+    "max_query_length": 200
+  },
+  "attribution": {
+    "notice": "This product uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.",
+    "source": "themoviedb.org",
+    "license": "TMDb data is free for non-commercial use with mandatory attribution; commercial use requires a separate written agreement. The snapshot is not redistributable. Not legal advice - see docs/phase-02-dataset-audit.md."
+  },
+  "notes": [
+    "Content-based retrieval only. No model is trained and no user data is collected; there are no accounts and nothing is persisted.",
+    "There is no relevance ground truth in this dataset. Every Phase 4 score is agreement with a structural proxy, not user satisfaction.",
+    "min_shared_terms=3 leaves a measured thin-evidence rate of 49.3% at the top 10; a returned film is a defensible match, not a verified one.",
+    "Cast is diluted inside representation D (recall@10 0.157). A user searching by actor is poorly served, which is why search covers titles only.",
+    "A result list shorter than k means the catalogue held too few candidates at the evidence threshold, not that the engine stopped searching."
+  ]
+}

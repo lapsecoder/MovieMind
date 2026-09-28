@@ -1,0 +1,108 @@
+{
+  "query": {
+    "movie_id": 1578549,
+    "title": "Operação Dinamite"
+  },
+  "k": 10,
+  "similarity": "cosine",
+  "evidence": {
+    "min_shared_terms": 3,
+    "requested_k": 10,
+    "returned": 5,
+    "candidates_examined": 1842,
+    "candidates_rejected": 1837,
+    "exhausted": true
+  },
+  "recommendations": [
+    {
+      "rank": 1,
+      "movie_id": 218866,
+      "title": "Sabían demasiado",
+      "score": 0.47547784447669983,
+      "year": 1962,
+      "genres": [
+        "comedy"
+      ],
+      "popularity": 2.4226,
+      "vote_average": 5.0,
+      "vote_count": 5,
+      "collection_name": null,
+      "shared_terms": 3
+    },
+    {
+      "rank": 2,
+      "movie_id": 4203,
+      "title": "Women on the Verge of a Nervous Breakdown",
+      "score": 0.2937769293785095,
+      "year": 1988,
+      "genres": [
+        "comedy",
+        "drama"
+      ],
+      "popularity": 4.8012,
+      "vote_average": 7.389,
+      "vote_count": 1033,
+      "collection_name": null,
+      "shared_terms": 3
+    },
+    {
+      "rank": 3,
+      "movie_id": 425250,
+      "title": "Os Raptores",
+      "score": 0.20178371667861938,
+      "year": 1969,
+      "genres": [
+        "crime"
+      ],
+      "popularity": 2.383,
+      "vote_average": 8.0,
+      "vote_count": 2,
+      "collection_name": null,
+      "shared_terms": 3
+    },
+    {
+      "rank": 4,
+      "movie_id": 1769859,
+      "title": "Blue, Blue",
+      "score": 0.13505861163139343,
+      "year": 1984,
+      "genres": [],
+      "popularity": 4.0618,
+      "vote_average": 0.0,
+      "vote_count": 0,
+      "collection_name": null,
+      "shared_terms": 3
+    },
+    {
+      "rank": 5,
+      "movie_id": 1254786,
+      "title": "The Life List",
+      "score": 0.07343084365129471,
+      "year": 2025,
+      "genres": [
+        "comedy",
+        "drama",
+        "romance"
+      ],
+      "popularity": 11.4165,
+      "vote_average": 6.952,
+      "vote_count": 635,
+      "collection_name": null,
+      "shared_terms": 3
+    }
+  ],
+  "skipped": [
+    {
+      "movie_id": 4499,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 99,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 219,
+      "reason": "insufficient_shared_terms"
+    }
+  ]
+}

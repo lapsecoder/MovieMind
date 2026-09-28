@@ -1,0 +1,11 @@
+{
+  "error": {
+    "code": "unknown_movie",
+    "message": "No film with that TMDb id is in the catalogue.",
+    "status": 404,
+    "details": {
+      "movie_id": 99999999,
+      "catalogue_size": 5000
+    }
+  }
+}

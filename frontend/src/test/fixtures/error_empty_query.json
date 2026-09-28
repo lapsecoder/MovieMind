@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "empty_query",
+    "message": "Query parameter 'q' must contain at least one non-whitespace character.",
+    "status": 400
+  }
+}

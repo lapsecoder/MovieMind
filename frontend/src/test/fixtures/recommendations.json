@@ -1,0 +1,214 @@
+{
+  "query": {
+    "movie_id": 278,
+    "title": "The Shawshank Redemption"
+  },
+  "k": 10,
+  "similarity": "cosine",
+  "evidence": {
+    "min_shared_terms": 3,
+    "requested_k": 10,
+    "returned": 10,
+    "candidates_examined": 17,
+    "candidates_rejected": 7,
+    "exhausted": false
+  },
+  "recommendations": [
+    {
+      "rank": 1,
+      "movie_id": 497,
+      "title": "The Green Mile",
+      "score": 0.28230270743370056,
+      "year": 1999,
+      "genres": [
+        "crime",
+        "drama",
+        "fantasy"
+      ],
+      "popularity": 38.5732,
+      "vote_average": 8.506,
+      "vote_count": 19849,
+      "collection_name": null,
+      "shared_terms": 6
+    },
+    {
+      "rank": 2,
+      "movie_id": 11086,
+      "title": "The Majestic",
+      "score": 0.2585269808769226,
+      "year": 2001,
+      "genres": [
+        "drama",
+        "romance"
+      ],
+      "popularity": 6.1049,
+      "vote_average": 6.763,
+      "vote_count": 868,
+      "collection_name": null,
+      "shared_terms": 4
+    },
+    {
+      "rank": 3,
+      "movie_id": 5876,
+      "title": "The Mist",
+      "score": 0.2440306693315506,
+      "year": 2007,
+      "genres": [
+        "horror",
+        "science fiction",
+        "thriller"
+      ],
+      "popularity": 17.0715,
+      "vote_average": 6.955,
+      "vote_count": 6097,
+      "collection_name": null,
+      "shared_terms": 4
+    },
+    {
+      "rank": 4,
+      "movie_id": 2216,
+      "title": "Five Cartridges",
+      "score": 0.1591668277978897,
+      "year": 1960,
+      "genres": [
+        "drama",
+        "war"
+      ],
+      "popularity": 2.2325,
+      "vote_average": 7.6,
+      "vote_count": 9,
+      "collection_name": null,
+      "shared_terms": 3
+    },
+    {
+      "rank": 5,
+      "movie_id": 169917,
+      "title": "A Walk Among the Tombstones",
+      "score": 0.1428097039461136,
+      "year": 2014,
+      "genres": [
+        "crime",
+        "drama",
+        "mystery",
+        "thriller"
+      ],
+      "popularity": 12.2278,
+      "vote_average": 6.345,
+      "vote_count": 3102,
+      "collection_name": null,
+      "shared_terms": 5
+    },
+    {
+      "rank": 6,
+      "movie_id": 87400,
+      "title": "Marie: A True Story",
+      "score": 0.12086379528045654,
+      "year": 1985,
+      "genres": [
+        "drama"
+      ],
+      "popularity": 2.8858,
+      "vote_average": 5.8,
+      "vote_count": 24,
+      "collection_name": null,
+      "shared_terms": 6
+    },
+    {
+      "rank": 7,
+      "movie_id": 11371,
+      "title": "The Score",
+      "score": 0.1176362857222557,
+      "year": 2001,
+      "genres": [
+        "action",
+        "crime",
+        "drama",
+        "mystery",
+        "thriller"
+      ],
+      "popularity": 8.4049,
+      "vote_average": 6.698,
+      "vote_count": 1951,
+      "collection_name": null,
+      "shared_terms": 3
+    },
+    {
+      "rank": 8,
+      "movie_id": 31677,
+      "title": "Diary of a Mad Housewife",
+      "score": 0.11507488787174225,
+      "year": 1970,
+      "genres": [
+        "comedy",
+        "drama"
+      ],
+      "popularity": 2.7376,
+      "vote_average": 6.181,
+      "vote_count": 47,
+      "collection_name": null,
+      "shared_terms": 4
+    },
+    {
+      "rank": 9,
+      "movie_id": 106449,
+      "title": "The Private Navy of Sgt. O'Farrell",
+      "score": 0.10981680452823639,
+      "year": 1968,
+      "genres": [
+        "comedy",
+        "war"
+      ],
+      "popularity": 2.6994,
+      "vote_average": 6.3,
+      "vote_count": 5,
+      "collection_name": null,
+      "shared_terms": 4
+    },
+    {
+      "rank": 10,
+      "movie_id": 21629,
+      "title": "Stir Crazy",
+      "score": 0.10827332735061646,
+      "year": 1980,
+      "genres": [
+        "comedy",
+        "crime"
+      ],
+      "popularity": 4.9301,
+      "vote_average": 6.5,
+      "vote_count": 497,
+      "collection_name": null,
+      "shared_terms": 7
+    }
+  ],
+  "skipped": [
+    {
+      "movie_id": 1759228,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 13682,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 33564,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 972809,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 960112,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 35151,
+      "reason": "insufficient_shared_terms"
+    },
+    {
+      "movie_id": 2196,
+      "reason": "insufficient_shared_terms"
+    }
+  ]
+}

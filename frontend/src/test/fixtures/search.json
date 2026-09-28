@@ -1,0 +1,58 @@
+{
+  "query": "the",
+  "limit": 4,
+  "total_matches": 1701,
+  "count": 4,
+  "results": [
+    {
+      "movie_id": 65632,
+      "title": "The 10th Victim",
+      "original_title": "La decima vittima",
+      "release_year": 1965,
+      "genres": [
+        "comedy",
+        "drama",
+        "science fiction"
+      ],
+      "popularity": 3.8937,
+      "match": "title_prefix"
+    },
+    {
+      "movie_id": 102783,
+      "title": "The 15 Year Old Girl",
+      "original_title": "La Fille de 15 ans",
+      "release_year": 1989,
+      "genres": [
+        "drama",
+        "romance"
+      ],
+      "popularity": 3.1483,
+      "match": "title_prefix"
+    },
+    {
+      "movie_id": 19972,
+      "title": "The 300 Spartans",
+      "original_title": "The 300 Spartans",
+      "release_year": 1962,
+      "genres": [
+        "adventure",
+        "history",
+        "war"
+      ],
+      "popularity": 3.6324,
+      "match": "title_prefix"
+    },
+    {
+      "movie_id": 11841,
+      "title": "The 36th Chamber of Shaolin",
+      "original_title": "少林三十六房",
+      "release_year": 1978,
+      "genres": [
+        "action",
+        "adventure"
+      ],
+      "popularity": 4.7838,
+      "match": "title_prefix"
+    }
+  ]
+}
