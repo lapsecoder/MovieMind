@@ -73,6 +73,25 @@ frontend/.vite/
 *.tsbuildinfo
 coverage/
 .nyc_output/
+# `public/` is the static directory the FastAPI preset serves, and it is pure
+# build output: deploy/stage_frontend.py wipes and repopulates it from
+# frontend/dist on every Vercel build. Committing it would mean committing a
+# copy of the frontend bundle that goes stale on the next build.
+/public/
+
+# ---------------------------------------------------------------------------
+# Deployment tooling
+#
+# `vercel.json` and `.python-version` ARE committed -- they are how the public
+# repository reproduces the deployment, and neither contains a secret. What
+# must never be committed is anything Vercel writes locally, or a corpus that
+# arrived outside `data/`.
+# ---------------------------------------------------------------------------
+.vercel/
+*.partial
+# `vercel build` drops a ~54 MB `uv` binary in the repository root when it has to
+# bootstrap one itself. It is a toolchain download, not source.
+/_uv/
 
 # ---------------------------------------------------------------------------
 # Temporary files
@@ -94,3 +113,6 @@ desktop.ini
 .idea/
 .vscode/
 *.swp
+
+.vercel
+.env*

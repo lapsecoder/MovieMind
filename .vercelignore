@@ -1,0 +1,49 @@
+# Files excluded from the Vercel deployment SOURCE UPLOAD.
+#
+# This list is not a security boundary on its own -- it is the first of two
+# independent gates that keep the corpus and the TMDb token out of the public
+# repository and out of reach of the browser. The second gate is
+# `functions["moviemind/api/app.py"].excludeFiles` in vercel.json, which shapes
+# the function bundle. Both must be edited deliberately, never to "make the
+# build pass".
+#
+# Vercel applies this file when uploading source. It does NOT re-apply it to
+# files a build command creates afterwards, which is what lets
+# deploy/fetch_corpus.py materialise data/processed/movies.jsonl during a cloud
+# build even though `data/` is listed here.
+
+# ---- secrets -----------------------------------------------------------
+# Vercel's built-in default ignores cover `.env.local` and `.env.*.local`, but
+# NOT a plain `.env`. This repository has a real one holding
+# TMDB_API_READ_ACCESS_TOKEN, so `.env` is excluded explicitly and by name.
+# `.env.example` is re-admitted: it documents the variable name with an empty
+# value and is safe. If a rule here is ever broadened, check that the negation
+# still sits directly after it -- a `.env*` pattern that re-admits everything
+# would put the real token in the source upload.
+.env
+.env.*
+!.env.example
+
+# ---- dataset -----------------------------------------------------------
+# The raw TMDb snapshot is not redistributable at all (API ToU sec 1.C grants
+# use, not redistribution), and no processed artefact belongs in version
+# control or in a source upload. All of it is fetched at build time instead.
+data/
+
+# ---- caches, coverage, Vercel state ------------------------------------
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.vercel/
+# `vercel build` can bootstrap a ~54 MB `uv` binary into the repository root.
+_uv/
+**/__pycache__/
+**/*.py[cod]
+
+# ---- not needed at runtime ---------------------------------------------
+# The function imports `moviemind`; it never imports or serves these. Trimming
+# them here keeps the uploaded source small and makes the bundle boundary in
+# vercel.json easy to reason about.
+tests/
+docs/
+frontend/dist/

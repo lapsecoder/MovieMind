@@ -158,6 +158,13 @@ no `VITE_API_URL` to set and no CORS configuration to get wrong.
 Startup loads and vectorises the 5,000-film corpus in about 0.27 s. API docs are
 at http://localhost:8000/docs.
 
+### 5. Deploy
+
+The public deployment is a Vercel project — a CDN-served frontend and one Python
+function on a single origin. `movies.jsonl` stays out of Git and is supplied to
+the build as a non-public artifact. See **[`docs/deployment.md`](docs/deployment.md)**
+for the architecture, the required environment variables and the exact commands.
+
 ---
 
 ## Tests and checks
@@ -194,6 +201,7 @@ skips when no snapshot is present.
 | `docs/phase-06-frontend.md` | Frontend architecture and accessibility decisions |
 | `docs/phase-07-integration-qa.md` | Real end-to-end integration run |
 | `docs/phase-08-final-qa.md` | Final QA, browser/accessibility audit, repository state |
+| `docs/deployment.md` | Public deployment: architecture, corpus handling, commands, licensing |
 
 ---
 
@@ -254,3 +262,8 @@ credential and makes no outbound network calls.
   TMDb, and it never calls the backend port directly.
 * `frontend/dist/` is gitignored build output and was scanned for secrets in
   Phase 8.
+* The public deployment keeps those properties by construction: `TMDB_API_READ_ACCESS_TOKEN`
+  is not a deployment variable at all, `.vercelignore` excludes `.env` and
+  `data/` from the source upload, the corpus is a build-time input rather than a
+  static file, and `deploy/audit_build.py` fails if a credential or a `.jsonl`
+  file reaches the static output. See `docs/deployment.md`.

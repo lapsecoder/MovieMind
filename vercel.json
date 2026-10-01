@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
+  "buildCommand": "python deploy/fetch_corpus.py && npm --prefix frontend ci && npm --prefix frontend run build && python deploy/stage_frontend.py && python deploy/prune_venv.py",
+  "functions": {
+    "moviemind/api/app.py": {
+      "maxDuration": 60,
+      "memory": 1024,
+      "excludeFiles": "{tests/**,docs/**,scripts/**,frontend/**,public/**,data/raw/**,data/audit/**,data/processed/{evaluation_labels,experiments,experiment_manifest}.json,_uv/**,.env,.env.*,.mypy_cache/**,.pytest_cache/**,.ruff_cache/**}"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

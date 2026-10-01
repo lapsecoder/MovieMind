@@ -14,7 +14,20 @@ and the *validation* of a request. Everything else is delegated.
 
 from __future__ import annotations
 
-from .app import create_app
+from typing import TYPE_CHECKING, Any
+
 from .settings import Settings
 
+if TYPE_CHECKING:
+    from .app import create_app
+
 __all__ = ["Settings", "create_app"]
+
+
+def __getattr__(name: str) -> Any:
+    """Resolve ``create_app`` on first access (PEP 562)."""
+    if name == "create_app":
+        from .app import create_app
+
+        return create_app
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
